@@ -34,7 +34,7 @@ def friends_detail(request, friend_id):
 
 class FriendCreate(CreateView):
     model = Friend
-    fields = '__all__'
+    fields = ['name', 'ethnicity', 'height', 'age']
     succes_url = '/friends/'
 
 
@@ -81,5 +81,5 @@ class MemoryUpdate(UpdateView):
 
 
 class MemoryDelete(DeleteView):
-    mode = Memory
+    model = Memory
     success_url = '/memories/'
